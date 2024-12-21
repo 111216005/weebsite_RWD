@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>張哲睿的個人部落格</title>
     <style>
-        /* 基礎樣式 */
+        /* 保持原有的CSS樣式 */
         * {
             margin: 0;
             padding: 0;
@@ -58,10 +58,15 @@
             gap: 2rem;
         }
 
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
         article {
             background: white;
             padding: 2rem;
-            margin-bottom: 2rem;
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
@@ -182,7 +187,6 @@
     </style>
 </head>
 <body>
-    <!-- 原HTML內容保持不變 -->
     <header>
         <h1>張哲睿 的個人部落格</h1>
         <nav>
@@ -197,14 +201,14 @@
     </header>
     
     <main>
-        <div>
+        <div class="main-content">
             <article id="section1">
                 <header>
                     <h2>關於我</h2>
                     <p>在此部落格中，將分享我在工作上及生活中的點滴。</p>
                 </header>
                 <section>
-                    <table cellspacing="20">
+                    <table>
                         <tr>
                             <td><img src="assets/images/selfie.jpg" alt="張哲睿 picture"></td>
                             <td>
@@ -220,100 +224,89 @@
                 </section>
             </article>
 
-            <!-- 學習經歷介紹 -->
-        <article id="section2">
-            <header>
-                <h2>工作經歷</h2>
-            </header>
-            <section>
-                <table>
-                    <thead>
+            <article id="section2">
+                <header>
+                    <h2>工作經歷</h2>
+                </header>
+                <section>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Dates</th>
+                                <th>Work</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2023-2024</td>
+                                <td>國立台北教育大學資訊科學系</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </article>
+
+            <article id="section3">
+                <header>
+                    <h2>工作技能</h2>
+                </header>
+                <section>
+                    <table>
                         <tr>
-                            <th>Dates</th>
-                            <th>Work</th>
+                            <td>Java</td>
+                            <td>⭐⭐⭐</td>
                         </tr>
-                    </thead>
-                    <tbody>
                         <tr>
-                            <td>2023-2024</td>
-                            <td>國立台北教育大學資訊科學系</td>
+                            <td>C++</td>
+                            <td>⭐⭐⭐</td>
                         </tr>
-                    </tbody>
-                </table>
-            </section>
-        </article>
+                        <tr>
+                            <td>Python</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                        </tr>
+                    </table>
+                </section>
+            </article>
 
-        <!-- 技能介紹 -->
-        <article id="section3">
-            <header>
-                <h2>工作技能</h2>
-            </header>
-            <section>
-                <table>
-                    <tr>
-                        <td>Java</td>
-                        <td>⭐⭐⭐</td>
-                    </tr>
-                    <tr>
-                        <td>C++</td>
-                        <td>⭐⭐⭐</td>
-                    </tr>
-                    <tr>
-                        <td>Python</td>
-                        <td>⭐⭐⭐⭐⭐</td>
-                    </tr>
-                </table>
-            </section>
-        </article>
+            <article id="section4">
+                <h2>音訊介紹</h2>
+                <audio controls>
+                    <source src="assets/audio/Sunrise.mp3" type="audio/mpeg">
+                    您的瀏覽器不支援音訊播放。
+                </audio>
+            </article>
 
-        <!-- 音樂作品介紹 -->
-        <article id="section4">
-            <h2>音訊介紹</h2>
-            <audio controls>
-                <!-- 改為你的作品 -->
-                <source src="assets/audio/Sunrise.mp3" type="audio/mpeg">
-            </audio>
-        </article>
+            <article id="section5">
+                <h2>視訊介紹</h2>
+                <video controls width="300">
+                    <source src="assets/video/Sunrise.mp4" type="video/mp4">
+                    您的瀏覽器不支援視訊播放。
+                </video>
+            </article>
 
-        <!-- 視訊作品介紹 -->
-        <article id="section5">
-            <h2>視訊介紹</h2>
-            <video controls width="300">
-                <!-- 改為你的作品 -->
-                <source src="assets/video/Sunrise.mp4" type="audio/mpeg">                
-        </article>
+            <article id="section6">
+                <h2>旅行照片集</h2>
+                <figure>
+                    <img src="assets/images/mountain.jpg" alt="山間風景">
+                    <figcaption>壯麗的山景</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/images/city.jpg" alt="城市景色">
+                    <figcaption>繁華的城市</figcaption>
+                </figure>
+            </article>
 
-        <!-- 圖片作品集介紹與描述 -->
-        <article id="section6">
-            <h2>旅行照片集</h2>
-            <figure style="display:inline-block;">
-                <!-- 改為你的作品 -->
-                <img src="assets/images/mountain.jpg" alt="山間風景" width="450">
-                <figcaption>壯麗的山景</figcaption>
-            </figure>
-            <figure style="display:inline-block;">
-                <!-- 改為你的作品 -->
-                <img src="assets/images/city.jpg" alt="城市景色" width="450">
-                <figcaption>繁華的城市</figcaption>
-            </figure>
-        </article>
+            <article id="section7">
+                <h2>更多資訊</h2>
+                <embed src="assets/pdf/llm models.pdf" type="application/pdf" width="100%" height="600">
+            </article>
 
-        <!-- 嵌入PDF文件 -->
-        <article id="section7">
-            <h2>更多資訊</h2>
-            <!-- 改為你的作品 -->
-            <embed src="assets/pdf/llm models.pdf" width="500" height="600">
-        </article>
+            <details>
+                <summary>點擊查看學習提示</summary>
+                <p>建議攜帶筆記本與筆，方便隨時記錄課堂中的關鍵知識點與靈感。</p>
+            </details>
 
-        <!-- 互動元素 -->
-        <details>
-            <summary>點擊查看學習提示</summary>
-            <p>建議攜帶筆記本與筆，方便隨時記錄課堂中的關鍵知識點與靈感。</p>
-        </details>
-
-        <!-- 加入地圖 -->
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.2784024338266!2d121.54206247541927!3d25.02462437782254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a908a8232611%3A0xeebfb2d71a5025c7!2z5ZyL56uL6Ie65YyX5pWZ6IKy5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1731827435609!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        
-    </main>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.2784024338266!2d121.54206247541927!3d25.02462437782254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a908a8232611%3A0xeebfb2d71a5025c7!2z5ZyL56uL6Ie65YyX5pWZ6IKy5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1731827435609!5m2!1szh-TW!2stw" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 
         <aside>
